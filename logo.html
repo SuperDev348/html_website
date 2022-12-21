@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Properties</title>
+    <style>
+        .hovered{
+            position: absolute;
+            left: 0;
+        }
+        .default{
+            position: absolute;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div onmouseover="makeFastLogoVisible()" onMouseOut="makeSlowLogoVisible()">
+        <div class="hovered" id="hovered-div" display="none">
+            <img  src="fast_optim.gif" alt="fast_logo" width="360" height="80">
+        </div>
+        <div class="default" id="default-div" display="block">
+            <img src="slow_optim.gif" alt="slow_logo" width="360" height="80">
+        </div>
+    </div>
+
+<script>
+    function makeFastLogoVisible(){
+        document.getElementById("hovered-div").style.display = "block";
+        document.getElementById("default-div").style.display = "none";
+    }
+    function makeSlowLogoVisible(){
+        document.getElementById("hovered-div").style.display = "none";
+        document.getElementById("default-div").style.display = "block";
+    }
+</script>
+</body>
+</html>
